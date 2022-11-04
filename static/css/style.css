@@ -16,12 +16,14 @@ body{
     color: #000;
     background-color: #fff;
 }
+/* Header Bölümü */
 #page-top {
     padding:14px;
     box-shadow: 0 0 3px rgba(0,0,0,0.5);
     display: flex;
     justify-content: space-around;
 }
+/* Logo Bölümü */
 #logo {
     flex:3;
     display: flex;
@@ -30,6 +32,8 @@ body{
 #logo > h1 {
     font-weight: 500;
 }
+/* Menu Bölümü */
+
 #menu {
     flex:9;
     display: flex;
@@ -84,4 +88,36 @@ body{
 #menu ul li a:hover::after {
     transform: scale(1);
     width: 100%;
+}
+/* Menu End */
+
+/* Header End */
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:7px 14px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+#footer-top {
+    padding:7px;
+}
+#footer-menu h2 {
+    font-weight: 300;
+    /* color:rgb(46, 46, 46); */
+    text-align: center;
+}
+#footer-menu ul {
+    list-style-type: none;
+}
+#footer-menu ul li {
+    display: inline-block;
+}
+#footer-menu ul li a {
+    text-decoration: none;
+    color:rgb(46, 46, 46);
+    display: block;
+    margin-left:5px;
+    padding:7px;
 }
