@@ -16,3 +16,128 @@ body{
     color: #000;
     background-color: #fff;
 }
+.image {
+   max-width: 100%;
+   animation: animimage .4s linear;
+}
+@keyframes animimage {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+#page-top {
+    padding:10px;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo {
+    flex:3;
+}
+#logo a {
+    text-decoration: none;
+    color:#000;
+}
+#logo a h1 {
+    font-weight: 500;
+}
+#p-right {
+    flex:9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:7px;
+}
+.home-btn {
+    text-decoration: none;
+    font-size:1em;
+    color: #fff;
+    background-color: rgb(0,69,219);
+    padding:7px 14px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+    transition: .5s ease-in-out;
+}
+.home-btn:hover {
+    background-color: rgb(0, 52, 163);
+}
+#content {
+    display: flex;
+    justify-content: space-around;
+    padding:10px;
+}
+#content-left {
+    flex:5;
+    display: flex;
+    justify-content: flex-end;
+    animation: contentleft .3s linear .4s backwards;
+ }
+ @keyframes contentleft {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+ }
+#content-right {
+    flex:7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    animation: contentright .4s linear .7s backwards;
+}
+@keyframes contentright {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+#content-right > div {
+    width:80%;
+    /* background-color: red; */
+    padding:10px;
+}
+.c-top {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:7px;
+}
+.c-top h1 {
+    font-size:2em;
+    font-weight: 300;
+}
+.c-center {
+    padding:10px;
+}
+.input-box {
+    position: relative;
+}
+.input-box input {
+    width: 70%;
+    height: 35px;
+    margin-bottom: 20px;
+    padding-left:40px;
+    font-size:1em;
+    font-family: 'Poppins',sans-serif;
+    border:none;
+    border:1px solid rgb(153, 153, 153);
+    border-radius: 3px;
+}
+.input-box input:focus{
+    outline-color: rgb(0,69,219);
+}
+.icon {
+    position: absolute;
+    left:0px;
+    top:0px;
+    color:#fff;
+    padding:9px 10px;
+    font-size:1em;
+    background-color: rgb(0,69,219);
+    border-radius: 3px;
+}
