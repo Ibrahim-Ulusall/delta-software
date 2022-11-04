@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Delta Software</title>
+</head>
+<body>
+    <!-- Header -->
+    <header id="page-top">
+        <div id="logo">
+            <h1>Delta Software</h1>
+        </div>
+        <div id="p-right">
+            <a href="{% url 'home' %}">Anasayfa</a>
+        </div>
+    </header>
+
+    <!-- End Header -->
+
+    <main>
+        <!-- Content -->
+        <section id="content">
+            <aside id="content-left">
+                <img src="{% static 'accounts/img/login.gif' %}" alt="image" class="image">
+            </aside>
+
+            <section id="content-right">
+                <div class="c-top">
+                    <h1>Giriş Yap</h1>
+                    <p><a href="#">Üye Ol</a></p>
+                </div>
+                <div class="c-center">
+                    <div class="input-box">
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" id="password">
+                    </div>
+                </div>
+                <div class="c-bottom">
+                    <a href="#" class="btn">Giriş Yap</a>
+                    <a href="#">Şifrenimi Unuttun ?</a>
+                </div>
+            </section>
+        </section>
+        <!-- End Content -->
+    </main>
+    <footer>
+        <p style="text-align:center; font-size:1em; color: #333;">&copy; 2022 Tüm hakları saklıdır.</p>
+    </footer>
+</body>
+</html>
