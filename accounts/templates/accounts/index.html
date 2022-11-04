@@ -17,7 +17,7 @@
             <a href="{% url 'home' %}"><h1>Delta Software</h1></a>
         </div>
         <div id="p-right">
-            <a href="{% url 'home' %}" class="home-btn">Üye Ol</a>
+            <a href="{% url 'home' %}" class="btn">Üye Ol</a>
         </div>
     </header>
 
@@ -33,20 +33,25 @@
             <section id="content-right">
                 <div class="c-top">
                     <h1>Giriş Yap</h1>
+                    <p>Devam etmek için giriş yapınız.</p>
                 </div>
                 <div class="c-center">
-                    <div class="input-box">
-                        <i class="fa-solid fa-user icon"></i>
-                        <input type="email" name="email" id="email" placeholder="Email" autofocus>
-                    </div>
-                    <div class="input-box">
-                        <i class="fa-solid fa-lock icon"></i>
-                        <input type="password" name="password" id="password" placeholder="Password">
-                    </div>
-                </div>
-                <div class="c-bottom">
-                    <a href="#" class="btn">Giriş Yap</a>
-                    <a href="#">Şifrenimi Unuttun ?</a>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="input-box">
+                            <i class="fa-solid fa-user icon"></i>
+                            <input type="email" name="email" id="email" placeholder="Email" autofocus required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input type="password" name="password" id="password" placeholder="Password" required>
+                        </div>
+                        <div class="input-box">
+                            <button class="btn btn2">Giriş Yap</button>
+                            <a href="#" class="forgot-password">Şifrenimi Unuttun ?</a>
+                        </div>
+                        
+                    </form>
                 </div>
             </section>
         </section>
