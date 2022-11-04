@@ -22,6 +22,9 @@ body{
     box-shadow: 0 0 3px rgba(0,0,0,0.5);
     display: flex;
     justify-content: space-around;
+    position: sticky;
+    top:0;
+    background-color: #fff;
 }
 /* Logo Bölümü */
 #logo {
