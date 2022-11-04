@@ -1,56 +1,81 @@
 {% load static %}
-
-<section id="lesson-content">
-    <aside id="lesson-left">
-        <ul>
-            <li>1</li>
-            <li>3</li>
-            <li>3</li>
-            <li>3</li>
-            <li>3</li>
-        </ul>
-    </aside>
-    
-    <section id="lesson-right">
-        <div class="l-box">
-            <article class="textbox">
-                <h1>Python</h1>
-                <h2>Dersleri</h2>
+<!-- container -->
+<section id="container">
+<!-- slider content -->
+    <section class="slider-content active">
+    <!-- slider -->
+        <section class="slider">
+            <article class="content">
+                <h1>Html Dersleri</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aperiam corrupti maxime corporis, ullam suscipit blanditiis molestiae, dolores aspernatur eveniet iste, mollitia amet ducimus? Quod expedita doloremque tempore ullam! Reprehenderit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero error distinctio iusto, explicabo hic ratione autem quibusdam id provident dolores odit, sunt esse. Dolorum similique vel esse illum accusantium repellat.
                 </p>
-                <button class="btn">Daha Fazla</button>
+                <a href="#" class="link">Derse Başla</a>
             </article>
-            <section class="imageBox">
-                <img src="{% static 'lesson/img/python_banner.png' %}" alt="image" class="image">
+            
+            <section class="imagebox">
+                <img src="{% static 'lesson/img/html.gif' %}" alt="" class="image">
             </section>
-        </div>
-
-        <div class="l-box">
-            <article class="textbox">
-                <h1>Python</h1>
-                <h2>Dersleri</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aperiam corrupti maxime corporis, ullam suscipit blanditiis molestiae, dolores aspernatur eveniet iste, mollitia amet ducimus? Quod expedita doloremque tempore ullam! Reprehenderit!
-                </p>
-                <button class="btn">Daha Fazla</button>
-            </article>
-            <section class="imageBox">
-                <img src="{% static 'lesson/img/python_banner.png' %}" alt="image" class="image">
-            </section>
-        </div>
-        <div class="l-box">
-            <article class="textbox">
-                <h1>Python</h1>
-                <h2>Dersleri</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque aperiam corrupti maxime corporis, ullam suscipit blanditiis molestiae, dolores aspernatur eveniet iste, mollitia amet ducimus? Quod expedita doloremque tempore ullam! Reprehenderit!
-                </p>
-                <button class="btn">Daha Fazla</button>
-            </article>
-            <section class="imageBox">
-                <img src="{% static 'lesson/img/python_banner.png' %}" alt="image" class="image">
-            </section>
-        </div>
+        </section>
+        <!-- end slider -->
     </section>
+
+    <section class="slider-content">
+        <!-- slider -->
+            <section class="slider">
+                <article class="content">
+                    <h1>Css Dersleri</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero error distinctio iusto, explicabo hic ratione autem quibusdam id provident dolores odit, sunt esse. Dolorum similique vel esse illum accusantium repellat.
+                    </p>
+                    <a href="#" class="link">Derse Başla</a>
+                </article>
+                
+                <section class="imagebox">
+                    <img src="{% static 'lesson/img/css.gif' %}" alt="" class="image">
+                </section>
+            </section>
+            <!-- end slider -->
+        </section>
+
+        <section class="slider-content">
+            <!-- slider -->
+                <section class="slider">
+                    <article class="content">
+                        <h1>Sql Dersleri</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero error distinctio iusto, explicabo hic ratione autem quibusdam id provident dolores odit, sunt esse. Dolorum similique vel esse illum accusantium repellat.
+                        </p>
+                        <a href="#" class="link">Derse Başla</a>
+                    </article>
+                    
+                    <section class="imagebox">
+                        <img src="{% static 'lesson/img/sql.gif' %}" alt="" class="image">
+                    </section>
+                </section>
+                <!-- end slider -->
+            </section>
+
+            <section class="slider-content">
+                <!-- slider -->
+                    <section class="slider">
+                        <article class="content">
+                            <h1>Python Dersleri</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero error distinctio iusto, explicabo hic ratione autem quibusdam id provident dolores odit, sunt esse. Dolorum similique vel esse illum accusantium repellat.
+                            </p>
+                            <a href="#" class="link">Derse Başla</a>
+                        </article>
+                        
+                        <section class="imagebox">
+                            <img src="{% static 'lesson/img/python.gif' %}" alt="" class="image">
+                        </section>
+                    </section>
+                    <!-- end slider -->
+                </section>
+<!-- end slider-content -->
+
+<div id="prev" onclick="prev();"><</div>
+<div id="next" onclick="next();">></div>
 </section>
+<!-- End Container -->

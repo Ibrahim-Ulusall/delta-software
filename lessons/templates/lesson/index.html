@@ -9,3 +9,7 @@
 {% block content %}
     {% include 'lesson/partials/_lesson_content.html' %}
 {% endblock %}
+
+{% block js_path %}
+    <script src="{% static 'lesson/js/app.js' %}"></script>
+{% endblock %}
