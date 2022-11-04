@@ -71,6 +71,10 @@ body{
     color:#fff;
     border-radius: 3px;
     box-shadow: 0 1px 2px rgb(0,0,0);
+    transition: .3s;
+}
+#menu .nav-right .btn-link:hover {
+    background-color: rgb(0, 52, 165);
 }
 #menu ul li a::after{
     content:'';
