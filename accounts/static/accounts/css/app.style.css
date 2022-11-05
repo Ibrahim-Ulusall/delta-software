@@ -168,3 +168,81 @@ footer{
         transform: translateY(50px);
     }
 }
+
+
+/* Register Page */
+
+#container {
+    padding:10px;
+    margin:10px;
+}
+.container-top {
+    padding:10px;
+    text-align: center;
+}
+.container-top h1 {
+    color:#000;
+    font-weight: 500;
+    animation: formtop .3s ease-in-out .3s backwards;
+}
+.container-top p {
+    color:rgb(153, 153, 153);
+    animation: formtop .4s ease-in-out .4s backwards;
+}
+.container-bottom .form-top{
+    display: flex;
+    align-items: center;
+    padding:10px 15px;
+    
+}
+@keyframes formtop {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
+.container-bottom .form-top .container-b-right,
+.container-bottom .form-top .container-b-left {
+    flex:6;
+    padding-left:20px;
+}
+.container-bottom .form-top .container-b-right{
+    animation: animate-right .5s ease-in-out .5s backwards;
+}
+@keyframes animate-right {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+.container-bottom .form-top .container-b-left{
+    animation: animate-left .5s ease-in-out .5s backwards;
+}
+@keyframes animate-left {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+.form-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 85%;
+}
+.form-bottom .btn2{
+    animation: btnanimate .6s linear .6s backwards;
+}
+@keyframes btnanimate{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+label {
+    display: block;
+    margin-bottom:5px;
+}
+.icon2 {
+    top:35%;
+}

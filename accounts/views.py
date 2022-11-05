@@ -7,4 +7,4 @@ def login(request):
     return render(request,'accounts/index.html')
 
 def register(request):
-    pass
+    return render(request,'accounts/register.html')
