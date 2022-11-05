@@ -17,12 +17,16 @@
             </ul>
         </div>
         <div class="nav-right">
-            
-            <ul>
+            {% if user.is_authenticated %}
+                <a href="#">{{ user.username|title }}</a>
+            {% else %}
+                <ul>
                 <li><a href="{% url 'register' %}">Üye Ol</a></li>
                 <li><a href="{% url 'login' %}" class="btn-link">Giriş Yap</a></li>
                 
             </ul>
+            {% endif %}
+            
         </div>
     </nav>
     <!-- End Nav -->
