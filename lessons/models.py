@@ -12,8 +12,8 @@ class Lesson(models.Model):
     slug = models.SlugField(db_index=True,unique=True,editable=False)
 
     def __str__(self) -> str:
-        return self.title.capitalize()
+        return self.title
 
     def save(self,*args,**kwargs):
         self.slug = slugify(self.title)
-        super.save(*args,**kwargs)
+        super().save(*args,**kwargs)
