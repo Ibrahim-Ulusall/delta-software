@@ -5,6 +5,10 @@ from django.contrib.auth.models import User
 
 
 def login_request(request):
+    if user.is_authenticated:
+        return render(request,'lesson/index.html',{
+            'LogoutError':'1'
+        })
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
