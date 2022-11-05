@@ -16,6 +16,17 @@ body{
     color: #000;
     background-color: #fff;
 }
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgb(219, 219, 219);
+  }
+   
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(221,211,211);
+    width: 5px;
+    border-radius: 5px;
+  }
 /* Header Bölümü */
 #page-top {
     padding:14px;
