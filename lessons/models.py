@@ -4,7 +4,7 @@ from django.utils.text import slugify
 
 class Lesson(models.Model):
 
-    title = models.CharField(max_lenght="50")
+    title = models.CharField(max_length=50)
     description = models.TextField()
     image = models.ImageField(upload_to = 'lessonImage')
     create_date = models.DateTimeField(auto_now_add=True,verbose_name='Oluşturulma Tarihi')
