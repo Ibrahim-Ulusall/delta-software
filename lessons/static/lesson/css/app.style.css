@@ -25,7 +25,7 @@
 }
 #container .slider-content .slider .imagebox .image {
     max-width: 100%;
-    animation: slideImage .4s linear;
+    animation: slideImage .5s linear .7s backwards;
 }
 @keyframes slideImage {
     0%{

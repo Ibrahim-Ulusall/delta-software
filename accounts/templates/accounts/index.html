@@ -11,6 +11,9 @@
     <title>Login | Delta Software</title>
 </head>
 <body>
+    {% if hata %}
+            <script>alert('Kullanıcı Adı veya Parola Hatalı!');</script>
+    {% endif %}
     <!-- Header -->
     <header id="page-top">
         <div id="logo">
@@ -58,9 +61,7 @@
         <!-- End Content -->
     </main>
     <footer>
-        {% if hata %}
-            <p>{{ hata }}</p>
-        {% endif %}
+        
         <p style="text-align:center; font-size:1em; color: #333;">&copy; 2022 Tüm hakları saklıdır.</p>
     </footer>
 </body>

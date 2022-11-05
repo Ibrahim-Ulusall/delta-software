@@ -1,14 +1,14 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
+from django.contrib import messages
 # Create your views here.
 
 
 def login_request(request):
-    if user.is_authenticated:
-        return render(request,'lesson/index.html',{
-            'LogoutError':'1'
-        })
+    # Dashboard'a yönlendir.
+    if request.user.is_authenticated:
+        return redirect('home')
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
@@ -21,6 +21,7 @@ def login_request(request):
             return render(request,'accounts/index.html',{
                 'hata':'Kullanıcı adi veya parola hatalı!'
             })
+    
     return render(request,'accounts/index.html')    
 
 def register(request):
@@ -69,3 +70,7 @@ def register(request):
                 return redirect('home')
 
     return render(request,'accounts/register.html')
+
+def logout_request(request):
+    logout(request)
+    return redirect('login')

@@ -9,7 +9,10 @@
 {% block content %}
     {% include 'lesson/partials/_lesson_content.html' %}
 {% endblock %}
-
+{% if error_message %}
+        <script>alert('Lütfen aktif olan oturumu kapatınız!');</script>
+    {% endif %}
 {% block js_path %}
+    
     <script src="{% static 'lesson/js/app.js' %}"></script>
 {% endblock %}
