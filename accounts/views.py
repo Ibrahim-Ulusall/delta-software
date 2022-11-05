@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate,login
-
+from django.contrib.auth.models import User
 # Create your views here.
 
 
@@ -26,7 +26,7 @@ def register(request):
         lastname = request.POST['lastname']
         username = request.POST['username']
         email = request.POST['email']
-        password = request.POST['passowrd']
+        password = request.POST['password']
         re_password = request.POST['re-password']
 
         userInput = [firstname,lastname,username,email,password,re_password]
@@ -36,16 +36,32 @@ def register(request):
                 return render(request,'accounts/register.html',{
                     'ValueError':'Tüm Alanlar Doldurulmalıdır.'
                 })
-        if '@gmail.com' not in email or '@hotmail.com' not in email:
-            return render(request,'accounts/register.html',{
-                'FormatError':'Lütfen İstenilen Formatta mail adresi giriniz.'
-            })    
+        # if '@gmail.com' not in email or '@hotmail.com' not in email:
+        #     return render(request,'accounts/register.html',{
+        #         'FormatError':'Lütfen İstenilen Formatta mail adresi giriniz.'
+        #     })    
         if password != re_password:
             return render(request,'accounts/register.html',{
                 'EqualsError':'Parolalar Uyuşmuyor.'
             })
         else:
-            pass
-
+            if User.objects.filter(username=username).exists():
+                return render(request,'accounts/register.html',{
+                    'username_used_error':'Kullanıcı Adı Kullanılıyor.'
+                })
+            elif User.objects.filter(email=email).exists():
+                return render(request,'accounts/register.html',{
+                    'email_used_error':'Email Adresi Kullanılıyor.'
+                })
+            else:
+                user = User.objects.create_user(
+                    first_name = firstname,
+                    last_name = lastname,
+                    username = username,
+                    email = email,
+                    password = password
+                )
+                user.save()
+                return redirect('home')
 
     return render(request,'accounts/register.html')

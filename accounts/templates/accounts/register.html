@@ -10,6 +10,24 @@
     <title>Kayıt Ol | Delta Software</title>
 </head>
 <body>
+    <!-- Error Section -->
+    {% if ValueError %}
+        <script>alert('Tüm Alanlar doldurulmalıdır.');</script>
+    {% endif %}
+
+    {% if EqualsError %}
+        <script>alert('Parolalar Eşleşmiyor');</script>
+    {% endif %}
+
+    {% if username_used_error %}
+        <script>alert('Kullanıcı Adı Kullanılıyor.');</script>
+    {% endif %}
+
+    {% if email_used_error %}
+        <script>alert('Email Adresi Kullanılıyor.');</script>
+    {% endif %}
+    
+    <!-- Error Section end -->
     <!-- Header -->
     <header id="page-top">
         <div id="logo">
