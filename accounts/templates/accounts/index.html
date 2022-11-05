@@ -40,7 +40,7 @@
                         {% csrf_token %}
                         <div class="input-box">
                             <i class="fa-solid fa-user icon"></i>
-                            <input type="email" name="email" id="email" placeholder="Email" autofocus required>
+                            <input type="text" name="username" id="username" placeholder="Username" autofocus required>
                         </div>
                         <div class="input-box">
                             <i class="fa-solid fa-lock icon"></i>
@@ -58,6 +58,9 @@
         <!-- End Content -->
     </main>
     <footer>
+        {% if hata %}
+            <p>{{ hata }}</p>
+        {% endif %}
         <p style="text-align:center; font-size:1em; color: #333;">&copy; 2022 Tüm hakları saklıdır.</p>
     </footer>
 </body>
